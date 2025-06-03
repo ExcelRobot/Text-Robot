@@ -1,0 +1,14 @@
+Substitutions =LAMBDA(text,old_texts,new_texts, LET(
+   \\LambdaName, "Substitutions",
+   _OldTexts, TOCOL(old_texts),
+   _NewTexts, TOCOL(new_texts),
+   _Seq, SEQUENCE(ROWS(_OldTexts)),
+   _Result, REDUCE(
+      text,
+      _Seq,
+      LAMBDA(txt,idx,
+         SUBSTITUTE(txt, INDEX(_OldTexts, idx, 1), INDEX(_NewTexts, idx, 1))
+      )
+   ),
+   _Result
+));

@@ -1,0 +1,7 @@
+Words =LAMBDA(text,[spill_down], LET(
+   \\LambdaName, "Words",
+   _Words, TEXTSPLIT(text, " "),
+   _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),
+   _Result, IF(_Transpose, TRANSPOSE(_Words), _Words),
+   _Result
+));

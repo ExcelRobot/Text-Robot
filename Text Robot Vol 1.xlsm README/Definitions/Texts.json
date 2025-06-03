@@ -1,0 +1,68 @@
+{
+  "Texts": [
+    {
+      "Name": "CamelCase.lambda",
+      "Description": "Definition of CamelCase lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "CamelCase = LAMBDA(input, LET(\n   \\\\LambdaName, \"CamelCase\",\n   Words, LAMBDA(text,[spill_down], LET(\n      _Words, TEXTSPLIT(text, \" \"),\n      _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),\n      _Result, IF(_Transpose, TRANSPOSE(_Words), _Words),\n      _Result\n   )),\n   _Words, Words(input, 1),\n   _FirstWord, LOWER(TAKE(_Words, 1)),\n   _RemainingWords, PROPER(DROP(_Words, 1)),\n   _Result, CONCAT(VSTACK(_FirstWord, _RemainingWords)),\n   _Result\n));",
+      "Location": "CamelCase"
+    },
+    {
+      "Name": "Characters.lambda",
+      "Description": "Definition of Characters lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "Characters = LAMBDA(text,[spill_down],[chunk_size], LET(\n   \\\\LambdaName, \"Characters\",\n   _ChunkSize, IF(chunk_size = 0, 1, chunk_size),\n   _Characters, MID(text, SEQUENCE(, ROUNDUP(LEN(text) / _ChunkSize, 0), 1, _ChunkSize), _ChunkSize),\n   _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),\n   _Result, IF(_Transpose, TRANSPOSE(_Characters), _Characters),\n   _Result\n));",
+      "Location": "Characters"
+    },
+    {
+      "Name": "KabobCase.lambda",
+      "Description": "Definition of KabobCase lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "/*Convert text in selection to kabob case.  */\r\nKabobCase = LAMBDA(input, LET(\n   \\\\LambdaName, \"KabobCase\",\n   \\\\CommandName, \"Convert To Kabob Case\",\n   \\\\Description, \"Convert text in selection to kabob case.\",\n   _Words, Words(input, 1),\n   _Result, TEXTJOIN(\"-\", , LOWER(_Words)),\n   _Result\n));",
+      "Location": "KabobCase"
+    },
+    {
+      "Name": "PascalCase.lambda",
+      "Description": "Definition of PascalCase lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "/*Convert the text in selection to pascal case.  */\r\nPascalCase = LAMBDA(input, LET(\n   \\\\LambdaName, \"PascalCase\",\n   \\\\CommandName, \"Conver To Pascal Case\",\n   \\\\Description, \"Convert the text in selection to pascal case.\",\n   _Words, Words(input, 1),\n   _Result, CONCAT(PROPER(_Words)),\n   _Result\n));",
+      "Location": "PascalCase"
+    },
+    {
+      "Name": "Substitutions.lambda",
+      "Description": "Definition of Substitutions lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "Substitutions = LAMBDA(text,old_texts,new_texts, LET(\n   \\\\LambdaName, \"Substitutions\",\n   _OldTexts, TOCOL(old_texts),\n   _NewTexts, TOCOL(new_texts),\n   _Seq, SEQUENCE(ROWS(_OldTexts)),\n   _Result, REDUCE(\n      text,\n      _Seq,\n      LAMBDA(txt,idx,\n         SUBSTITUTE(txt, INDEX(_OldTexts, idx, 1), INDEX(_NewTexts, idx, 1))\n      )\n   ),\n   _Result\n));",
+      "Location": "Substitutions"
+    },
+    {
+      "Name": "TrimEnd.lambda",
+      "Description": "Definition of TrimEnd lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "TrimEnd = LAMBDA(text,[character], LET(\n   \\\\LambdaName, \"TrimEnd\",\n   _TrimChar, IF(ISOMITTED(character), \" \", character),\n   _Match, MID(text, SEQUENCE(LEN(text)), 1) = _TrimChar,\n   _Last, XMATCH(FALSE, _Match, , -1),\n   _Result, IF(ISNA(_Last), \"\", LEFT(text, _Last)),\n   _Result\n));",
+      "Location": "TrimEnd"
+    },
+    {
+      "Name": "TrimStart.lambda",
+      "Description": "Definition of TrimStart lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "TrimStart = LAMBDA(text,[character], LET(\n   \\\\LambdaName, \"TrimStart\",\n   _TrimChar, IF(ISOMITTED(character), \" \", character),\n   _Chars, MID(text, SEQUENCE(LEN(text)), 1),\n   _Match, _Chars = _TrimChar,\n   _First, XMATCH(FALSE, _Match),\n   _Result, IF(ISNA(_First), \"\", MID(text, _First, LEN(text))),\n   _Result\n));",
+      "Location": "TrimStart"
+    },
+    {
+      "Name": "Words.lambda",
+      "Description": "Definition of Words lambda function.",
+      "Type": "ExcelNameText",
+      "ContentType": "ExcelFormula",
+      "Value": "Words = LAMBDA(text,[spill_down], LET(\n   \\\\LambdaName, \"Words\",\n   _Words, TEXTSPLIT(text, \" \"),\n   _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),\n   _Result, IF(_Transpose, TRANSPOSE(_Words), _Words),\n   _Result\n));",
+      "Location": "Words"
+    }
+  ]
+}

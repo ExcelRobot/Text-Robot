@@ -1,0 +1,9 @@
+/*Convert text in selection to kabob case.  */
+KabobCase = LAMBDA(input, LET(
+   \\LambdaName, "KabobCase",
+   \\CommandName, "Convert To Kabob Case",
+   \\Description, "Convert text in selection to kabob case.",
+   _Words, Words(input, 1),
+   _Result, TEXTJOIN("-", , LOWER(_Words)),
+   _Result
+));

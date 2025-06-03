@@ -1,0 +1,14 @@
+CamelCase = LAMBDA(input, LET(
+   \\LambdaName, "CamelCase",
+   Words, LAMBDA(text,[spill_down], LET(
+      _Words, TEXTSPLIT(text, " "),
+      _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),
+      _Result, IF(_Transpose, TRANSPOSE(_Words), _Words),
+      _Result
+   )),
+   _Words, Words(input, 1),
+   _FirstWord, LOWER(TAKE(_Words, 1)),
+   _RemainingWords, PROPER(DROP(_Words, 1)),
+   _Result, CONCAT(VSTACK(_FirstWord, _RemainingWords)),
+   _Result
+));

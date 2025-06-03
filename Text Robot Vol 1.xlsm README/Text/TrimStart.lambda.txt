@@ -1,0 +1,9 @@
+TrimStart = LAMBDA(text,[character], LET(
+   \\LambdaName, "TrimStart",
+   _TrimChar, IF(ISOMITTED(character), " ", character),
+   _Chars, MID(text, SEQUENCE(LEN(text)), 1),
+   _Match, _Chars = _TrimChar,
+   _First, XMATCH(FALSE, _Match),
+   _Result, IF(ISNA(_First), "", MID(text, _First, LEN(text))),
+   _Result
+));

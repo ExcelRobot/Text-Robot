@@ -1,0 +1,8 @@
+Characters =LAMBDA(text,[spill_down],[chunk_size], LET(
+   \\LambdaName, "Characters",
+   _ChunkSize, IF(chunk_size = 0, 1, chunk_size),
+   _Characters, MID(text, SEQUENCE(, ROUNDUP(LEN(text) / _ChunkSize, 0), 1, _ChunkSize), _ChunkSize),
+   _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),
+   _Result, IF(_Transpose, TRANSPOSE(_Characters), _Characters),
+   _Result
+));

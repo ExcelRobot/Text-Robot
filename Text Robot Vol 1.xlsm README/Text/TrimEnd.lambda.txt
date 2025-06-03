@@ -1,0 +1,8 @@
+TrimEnd = LAMBDA(text,[character], LET(
+   \\LambdaName, "TrimEnd",
+   _TrimChar, IF(ISOMITTED(character), " ", character),
+   _Match, MID(text, SEQUENCE(LEN(text)), 1) = _TrimChar,
+   _Last, XMATCH(FALSE, _Match, , -1),
+   _Result, IF(ISNA(_Last), "", LEFT(text, _Last)),
+   _Result
+));

@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="18"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="18"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s17">
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s18">
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s19">
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s20">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#747474"/>
+   </Borders>
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="14"
+    ss:Color="#000000" ss:Bold="1" ss:Italic="1"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="_xleta.SCAN" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.TAKE" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.TEXT" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.TEXTSPLIT" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.character" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.chunk_size" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.instance_number" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.spill_down" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\CommandName" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\Description" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\LambdaName" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._AfterLastComma" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Characters" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Chars" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ChunkSize" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._First" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._FirstWord" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Last" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Match" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Nenew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._new_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Newnew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTenew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTexnew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextnew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTexts" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTexts_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextsew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextsext" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextsnew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextst" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextstext" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextsw_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTextsxt" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NewTnew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Nnew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._old_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OldT" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OldTe" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OldTex" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OldText" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OldTexts" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Onew_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._RemainingWords" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Res" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Resu" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Resul" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Result" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Return" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Seq" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Transpose" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._TrimChar" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Words" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.character" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.chunk_size" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.find_list" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.i" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.id" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.idx" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.in" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.ind" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.inde" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.index" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.indx" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.input" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.instance_number" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.n" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.ne" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.net" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new_" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new_t" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new_te" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new_tex" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.new_texts" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.old_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.old_texts" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.s" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.spill_down" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.t" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.teold_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.texold_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.textold_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.told_text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.tx" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.txt" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.Words" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.x" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="CamelCase"
+   ss:RefersTo="=LAMBDA(input, LET(&#10;   \\LambdaName, &quot;CamelCase&quot;,&#10;   Words, LAMBDA(text,[spill_down], LET(&#10;      _Words, TEXTSPLIT(text, &quot; &quot;),&#10;      _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),&#10;      _Result, IF(_Transpose, TRANSPOSE(_Words), _Words),&#10;      _Result&#10;   )),&#10;   _Words, Words(input, 1),&#10;   _FirstWord, LOWER(TAKE(_Words, 1)),&#10;   _RemainingWords, PROPER(DROP(_Words, 1)),&#10;   _Result, CONCAT(VSTACK(_FirstWord, _RemainingWords)),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="Characters"
+   ss:RefersTo="=LAMBDA(text,[spill_down],[chunk_size], LET(&#10;   \\LambdaName, &quot;Characters&quot;,&#10;   _ChunkSize, IF(chunk_size = 0, 1, chunk_size),&#10;   _Characters, MID(text, SEQUENCE(, ROUNDUP(LEN(text) / _ChunkSize, 0), 1, _ChunkSize), _ChunkSize),&#10;   _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),&#10;   _Result, IF(_Transpose, TRANSPOSE(_Characters), _Characters),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="Substitutions"
+   ss:RefersTo="=LAMBDA(text,old_texts,new_texts, LET(&#10;   \\LambdaName, &quot;Substitutions&quot;,&#10;   _OldTexts, TOCOL(old_texts),&#10;   _NewTexts, TOCOL(new_texts),&#10;   _Seq, SEQUENCE(ROWS(_OldTexts)),&#10;   _Result, REDUCE(&#10;      text,&#10;      _Seq,&#10;      LAMBDA(txt,idx,&#10;         SUBSTITUTE(txt, INDEX(_OldTexts, idx, 1), INDEX(_NewTexts, idx, 1))&#10;      )&#10;   ),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="TrimEnd"
+   ss:RefersTo="=LAMBDA(text,[character], LET(&#10;   \\LambdaName, &quot;TrimEnd&quot;,&#10;   _TrimChar, IF(ISOMITTED(character), &quot; &quot;, character),&#10;   _Match, MID(text, SEQUENCE(LEN(text)), 1) = _TrimChar,&#10;   _Last, XMATCH(FALSE, _Match, , -1),&#10;   _Result, IF(ISNA(_Last), &quot;&quot;, LEFT(text, _Last)),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="TrimStart"
+   ss:RefersTo="=LAMBDA(text,[character], LET(&#10;   \\LambdaName, &quot;TrimStart&quot;,&#10;   _TrimChar, IF(ISOMITTED(character), &quot; &quot;, character),&#10;   _Chars, MID(text, SEQUENCE(LEN(text)), 1),&#10;   _Match, _Chars = _TrimChar,&#10;   _First, XMATCH(FALSE, _Match),&#10;   _Result, IF(ISNA(_First), &quot;&quot;, MID(text, _First, LEN(text))),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="Words"
+   ss:RefersTo="=LAMBDA(text,[spill_down], LET(&#10;   \\LambdaName, &quot;Words&quot;,&#10;   _Words, TEXTSPLIT(text, &quot; &quot;),&#10;   _Transpose, IF(ISOMITTED(spill_down), FALSE, spill_down),&#10;   _Result, IF(_Transpose, TRANSPOSE(_Words), _Words),&#10;   _Result&#10;))"/>
+ </Names>
+ <Worksheet ss:Name="Commands">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="73" ss:StyleID="s19"
+   ss:DefaultColumnWidth="78" ss:DefaultRowHeight="15.75">
+   <Column ss:StyleID="s19" ss:AutoFitWidth="0" ss:Width="23.25"/>
+   <Column ss:StyleID="s17" ss:Width="244.5"/>
+   <Column ss:StyleID="s18" ss:Width="375"/>
+   <Row ss:Height="24">
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Text Robot</Data></Cell>
+   </Row>
+   <Row ss:Index="3" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Convert Case</Data></Cell>
+   </Row>
+   <Row ss:Index="5">
+    <Cell ss:Index="2"><Data ss:Type="String">Convert to Upper Case</Data></Cell>
+    <Cell><Data ss:Type="String">Convert text in selection to upper case.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Convert to Lower Case</Data></Cell>
+    <Cell><Data ss:Type="String">Convert text in selection to lower case.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Convert to Proper Case</Data></Cell>
+    <Cell><Data ss:Type="String">Convert text in selection to proper case.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Convert to Camel Case</Data></Cell>
+    <Cell><Data ss:Type="String">Convert text in selection to camel case.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Convert to Pascal Case</Data></Cell>
+    <Cell><Data ss:Type="String">Convert text in selection to pascal case.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Convert to Kabob Case</Data></Cell>
+    <Cell><Data ss:Type="String">Convert text in selection to kabob case.</Data></Cell>
+   </Row>
+   <Row ss:Index="12" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Characters</Data></Cell>
+   </Row>
+   <Row ss:Index="14">
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Underscores With Spaces</Data></Cell>
+    <Cell><Data ss:Type="String">Replace underscores with spaces in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Underscores With Hyphens</Data></Cell>
+    <Cell><Data ss:Type="String">Replace underscores with hyphens in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Spaces With Underscores</Data></Cell>
+    <Cell><Data ss:Type="String">Replace spaces with underscores in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Spaces With Hyphens</Data></Cell>
+    <Cell><Data ss:Type="String">Replace spaces with hyphens in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Spaces With Periods</Data></Cell>
+    <Cell><Data ss:Type="String">Replace spaces with periods in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Commas With Semicolons</Data></Cell>
+    <Cell><Data ss:Type="String">Replace commas with semicolons in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Commas With Pipes</Data></Cell>
+    <Cell><Data ss:Type="String">Replace  commas with pipes in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Pipes With Commas</Data></Cell>
+    <Cell><Data ss:Type="String">Replace pipes with  commas in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Pipes With Semicolons</Data></Cell>
+    <Cell><Data ss:Type="String">Replace pipes with semicolons in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Semicolons With Commas</Data></Cell>
+    <Cell><Data ss:Type="String">Replace semicolons with  commas in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Semicolons With Pipes</Data></Cell>
+    <Cell><Data ss:Type="String">Replace semicolons with pipes in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Parenthesis With Curly Braces</Data></Cell>
+    <Cell><Data ss:Type="String">Replace parenthesis with curly braces in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Parenthesis With Square Brackets</Data></Cell>
+    <Cell><Data ss:Type="String">Replace parenthesis with square brackets in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Curly Braces With Parenthesis</Data></Cell>
+    <Cell><Data ss:Type="String">Replace curly braces with parenthesis in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Curly Braces With Square Brackets</Data></Cell>
+    <Cell><Data ss:Type="String">Replace curly braces with square brackets in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Square Brackets With Parenthesis</Data></Cell>
+    <Cell><Data ss:Type="String">Replace square brackets with parenthesis in selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Replace Square Brackets With Curly Braces</Data></Cell>
+    <Cell><Data ss:Type="String">Replace square brackets with curly braces in selected text.</Data></Cell>
+   </Row>
+   <Row ss:Index="32" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Characters</Data></Cell>
+   </Row>
+   <Row ss:Index="34">
+    <Cell ss:Index="2"><Data ss:Type="String">Remove First N Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the first N characters of the text in selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Last N Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the last N characters of the text in selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove First N Words</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the first N words from the text in the selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove First Word</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the first word from the text in the selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Last N Words</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the last N words from the text in the selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Last Word</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the last word from the text in the selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the specified text from the selection.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Text Before Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the text left of the last instance of the specified text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Remove Text After Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Removes the text right of the first instance of the specified text.</Data></Cell>
+   </Row>
+   <Row ss:Index="44" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Trim Characters</Data></Cell>
+   </Row>
+   <Row ss:Index="46">
+    <Cell ss:Index="2"><Data ss:Type="String">Trim Spaces</Data></Cell>
+    <Cell><Data ss:Type="String">Removes all spaces from a text string except single spaces between words.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Trim Spaces From Start</Data></Cell>
+    <Cell><Data ss:Type="String">Removes spaces from the beginning of a text string.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Trim Spaces From End</Data></Cell>
+    <Cell><Data ss:Type="String">Removes spaces from the end of a text string.</Data></Cell>
+   </Row>
+   <Row ss:Index="50" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Split Text</Data></Cell>
+   </Row>
+   <Row ss:Index="52">
+    <Cell ss:Index="2"><Data ss:Type="String">Split By Words</Data></Cell>
+    <Cell><Data ss:Type="String">Spill the words in the active cell text to the right.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Split By Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Spill the characters in the active cell text to the right.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Split By N Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Spill the characters in the active cell text to the right in chunks of length N.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">List Words</Data></Cell>
+    <Cell><Data ss:Type="String">Spill the words in the active cell text to below.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">List Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Spill the characters in the active cell text to below.</Data></Cell>
+   </Row>
+   <Row ss:Index="58" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Insert Text</Data></Cell>
+   </Row>
+   <Row ss:Index="60">
+    <Cell ss:Index="2"><Data ss:Type="String">Prepend Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Prepend the user provided text to the left of the selected text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Append Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Append the user provided text to the right of the selected text.</Data></Cell>
+   </Row>
+   <Row ss:Index="63" ss:Height="18.75" ss:StyleID="s20">
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Text</Data></Cell>
+   </Row>
+   <Row ss:Index="65">
+    <Cell ss:Index="2"><Data ss:Type="String">Keep First Word</Data></Cell>
+    <Cell><Data ss:Type="String">Returns the first word in the active cell.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Last Word</Data></Cell>
+    <Cell><Data ss:Type="String">Returns the last word in the active cell.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Nth Word</Data></Cell>
+    <Cell><Data ss:Type="String">Keep the Nth word in the sentence (use negative to count from the right).</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep First Character</Data></Cell>
+    <Cell><Data ss:Type="String">Returns first character in the active cell.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep First N Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Returns first N characters in the active cell.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Last Character</Data></Cell>
+    <Cell><Data ss:Type="String">Returns last character in the active cell.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Last N Characters</Data></Cell>
+    <Cell><Data ss:Type="String">Returns last N characters in the active cell.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Text Before Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Keeps only the text left of the last instance of the specified text.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Keep Text After Specified Text</Data></Cell>
+    <Cell><Data ss:Type="String">Keeps only the text right of the first instance of the specified text.</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

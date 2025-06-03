@@ -1,0 +1,9 @@
+/*Convert the text in selection to pascal case.  */
+PascalCase = LAMBDA(input, LET(
+   \\LambdaName, "PascalCase",
+   \\CommandName, "Conver To Pascal Case",
+   \\Description, "Convert the text in selection to pascal case.",
+   _Words, Words(input, 1),
+   _Result, CONCAT(PROPER(_Words)),
+   _Result
+));
