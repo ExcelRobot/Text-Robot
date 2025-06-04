@@ -8,15 +8,30 @@
 
 ## Available Robot Commands
 
+[Convert](#convert) | [Insert](#insert) | [Keep](#keep) | [Remove](#remove) | [Replace](#replace) | [Split](#split) | [Trim](#trim)
+
+### Convert
+
 | Name | Description |
 | --- | --- |
-| [Append Specified Text](#append-specified-text) | Append the user provided text to the right of the selected text. |
 | [Convert To Camel Case](#convert-to-camel-case) | Convert text in selection to camel case. |
 | [Convert To Kabob Case](#convert-to-kabob-case) | Convert text in selection to kabob case. |
 | [Convert To Lower Case](#convert-to-lower-case) | Convert text in selection to lower case. |
 | [Convert To Pascal Case](#convert-to-pascal-case) | Convert the text in selection to pascal case. |
 | [Convert To Proper Case](#convert-to-proper-case) | Convert text in selection to proper case. |
 | [Convert To Upper Case](#convert-to-upper-case) | Convert text in selection to upper case. |
+
+### Insert
+
+| Name | Description |
+| --- | --- |
+| [Append Specified Text](#append-specified-text) | Append the user provided text to the right of the selected text. |
+| [Prepend Specified Text](#prepend-specified-text) | Prepend the user provided text to the left of the selected text. |
+
+### Keep
+
+| Name | Description |
+| --- | --- |
 | [Keep First Character](#keep-first-character) | Returns first character in the active cell. |
 | [Keep First N Characters](#keep-first-n-characters) | Returns first N characters in the active cell. |
 | [Keep First Word](#keep-first-word) | Return the first word in the active cell. |
@@ -26,10 +41,11 @@
 | [Keep Nth Word](#keep-nth-word) | Return the Nth word in the active cell (use negatives to count from the end). |
 | [Keep Text After Specified Text](#keep-text-after-specified-text) | Keeps the text right of the first instance of the specified text. |
 | [Keep Text Before Specified Text](#keep-text-before-specified-text) | Keeps the text left of the last instance of the specified text. |
-| [Left Trim Spaces](#left-trim-spaces) | Removes spaces from start of a text string. |
-| [List Characters](#list-characters) | Spill characters of text in active cell to below. |
-| [List Words](#list-words) | Spill words of text in active cell to below. |
-| [Prepend Specified Text](#prepend-specified-text) | Prepend the user provided text to the left of the selected text. |
+
+### Remove
+
+| Name | Description |
+| --- | --- |
 | [Remove First N Characters](#remove-first-n-characters) | Remove the first N characters of the text in selection. |
 | [Remove First N Words](#remove-first-n-words) | Removes the first N words from the text in the selection. |
 | [Remove First Word](#remove-first-word) | Removes the first word from the text in the selection. |
@@ -39,6 +55,11 @@
 | [Remove Specified Text](#remove-specified-text) | Remove specified text from the selection. |
 | [Remove Text After Specified Text](#remove-text-after-specified-text) | Removes the text right of the first instance of the specified text. |
 | [Remove Text Before Specified Text](#remove-text-before-specified-text) | Removes the text left of the last instance of the specified text. |
+
+### Replace
+
+| Name | Description |
+| --- | --- |
 | [Replace Commas With Pipes](#replace-commas-with-pipes) | Replace commas with pipes in selected text. |
 | [Replace Commas With Semicolons](#replace-commas-with-semicolons) | Replace commas with semicolons in selected text. |
 | [Replace Curly Braces With Parenthesis](#replace-curly-braces-with-parenthesis) | Replace curly braces with parenthesis in selected text. |
@@ -56,10 +77,23 @@
 | [Replace Square Brackets With Parenthesis](#replace-square-brackets-with-parenthesis) | Replace square brackets with parenthesis in selected text. |
 | [Replace Underscores With Hyphens](#replace-underscores-with-hyphens) | Replace underscores with hyphens in selected text. |
 | [Replace Underscores With Spaces](#replace-underscores-with-spaces) | Replace underscores with spaces in selected text. |
-| [Right Trim Spaces](#right-trim-spaces) | Removes spaces from end of a text string. |
+
+### Split
+
+| Name | Description |
+| --- | --- |
+| [List Characters](#list-characters) | Spill characters of text in active cell to below. |
+| [List Words](#list-words) | Spill words of text in active cell to below. |
 | [Split By Characters](#split-by-characters) | Spill characters of text in active cell to the right. |
 | [Split By N Characters](#split-by-n-characters) | Spill characters of text in active cell to the right in chunks of length N. |
 | [Split By Words](#split-by-words) | Spill words of text in active cell to the right. |
+
+### Trim
+
+| Name | Description |
+| --- | --- |
+| [Left Trim Spaces](#left-trim-spaces) | Removes spaces from start of a text string. |
+| [Right Trim Spaces](#right-trim-spaces) | Removes spaces from end of a text string. |
 | [Trim Spaces](#trim-spaces) | Removes all spaces from a text string except single spaces between words. |
 | [Trim Spaces From End](#trim-spaces-from-end) | Removes spaces from end of a text string. |
 | [Trim Spaces From Start](#trim-spaces-from-start) | Removes spaces from start of a text string. |
@@ -89,11 +123,12 @@
 
 *Append the user provided text to the right of the selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Insert`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=(\[\[ActiveCell::Formula\]\])&"{{Text\_To\_Append}}"</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -103,7 +138,7 @@
 
 *Convert text in selection to camel case.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Convert`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -119,7 +154,7 @@
 
 *Convert text in selection to kabob case.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Convert`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -135,7 +170,7 @@
 
 *Convert text in selection to lower case.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Convert`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -151,7 +186,7 @@
 
 *Convert the text in selection to pascal case.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Convert`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -167,12 +202,11 @@
 
 *Convert text in selection to proper case.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Convert`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=PROPER(\[\[ActiveCell::Formula\]\])</code> |
-| Scroll To Destination | ☐Yes ☑No |
 | User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <code>pc</code> |
 
@@ -184,7 +218,7 @@
 
 *Convert text in selection to upper case.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Convert`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -200,11 +234,12 @@
 
 *Returns first character in the active cell.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=LEFT(\[\[ActiveCell::Formula\]\])</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <ol><li><code>l</code></li><li><code>fc</code></li><li><code>kfc</code></li></ol> |
 
 [^Top](#oa-robot-definitions)
@@ -215,11 +250,12 @@
 
 *Returns first N characters in the active cell.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=LEFT(\[\[ActiveCell::Formula\]\],{{N}})</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <ol><li><code>l</code></li><li><code>fc</code></li><li><code>kfc</code></li></ol> |
 
 [^Top](#oa-robot-definitions)
@@ -230,11 +266,12 @@
 
 *Return the first word in the active cell.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TAKE(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,1)</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <ol><li><code>fw</code></li><li><code>kfw</code></li></ol> |
 
 [^Top](#oa-robot-definitions)
@@ -245,11 +282,12 @@
 
 *Returns last character in the active cell.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=RIGHT(\[\[ActiveCell::Formula\]\])</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <ol><li><code>r</code></li><li><code>lc</code></li><li><code>klc</code></li></ol> |
 
 [^Top](#oa-robot-definitions)
@@ -260,11 +298,12 @@
 
 *Returns last N characters in the active cell.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=RIGHT(\[\[ActiveCell::Formula\]\],{{N}})</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <ol><li><code>r</code></li><li><code>lc</code></li><li><code>klc</code></li></ol> |
 
 [^Top](#oa-robot-definitions)
@@ -275,11 +314,12 @@
 
 *Return the last word in the active cell.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TAKE(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,\-1)</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Launch Codes | <ol><li><code>lw</code></li><li><code>klw</code></li></ol> |
 
 [^Top](#oa-robot-definitions)
@@ -290,12 +330,13 @@
 
 *Return the Nth word in the active cell (use negatives to count from the end).*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TAKE(TAKE(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,{{N}}),,\-SIGN({{N}}))</code> |
 | Parameters | <ol><li>[N](#keep-nth-word--n)</li></ol> |
+| User Context Filter | ExcelActiveCellValueIsText |
 | Outputs | <ol></ol> |
 | Launch Codes | <ol><li><code>nw</code></li><li><code>knw</code></li></ol> |
 
@@ -318,7 +359,7 @@
 
 *Keeps the text right of the first instance of the specified text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -333,7 +374,7 @@
 
 *Keeps the text left of the last instance of the specified text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Keep`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -348,7 +389,7 @@
 
 *Removes spaces from start of a text string.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Trim`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -364,7 +405,7 @@
 
 *Spill characters of text in active cell to below.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Split`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -381,7 +422,7 @@
 
 *Spill words of text in active cell to below.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Split`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -398,11 +439,12 @@
 
 *Prepend the user provided text to the left of the selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Insert`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\="{{Text\_To\_Prepend}}"&(\[\[ActiveCell::Formula\]\])</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -412,7 +454,7 @@
 
 *Remove the first N characters of the text in selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -442,11 +484,12 @@
 
 *Removes the first N words from the text in the selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TEXTJOIN(" ",TRUE,DROP(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,{{Number\_Of\_Words\_To\_Remove}}))</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -456,11 +499,12 @@
 
 *Removes the first word from the text in the selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TEXTJOIN(" ",TRUE,DROP(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,1))</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -470,7 +514,7 @@
 
 *Remove the last N characters of the text in selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -500,11 +544,12 @@
 
 *Removes the last N words from the text in the selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TEXTJOIN(" ",TRUE,DROP(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,\-{{Number\_Of\_Words\_To\_Remove}}))</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -514,11 +559,12 @@
 
 *Removes the last word from the text in the selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=TEXTJOIN(" ",TRUE,DROP(TEXTSPLIT(\[\[ActiveCell::Formula\]\]," "),,\-1))</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -528,11 +574,12 @@
 
 *Remove specified text from the selection.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
 | Formula | <code>\=SUBSTITUTE(\[\[ActiveCell::Formula\]\],"{{Text\_To\_Remove}}","")</code> |
+| User Context Filter | ExcelActiveCellValueIsText |
 
 [^Top](#oa-robot-definitions)
 
@@ -542,7 +589,7 @@
 
 *Removes the text right of the first instance of the specified text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -557,7 +604,7 @@
 
 *Removes the text left of the last instance of the specified text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Remove`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -572,7 +619,7 @@
 
 *Replace commas with pipes in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -587,7 +634,7 @@
 
 *Replace commas with semicolons in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -602,7 +649,7 @@
 
 *Replace curly braces with parenthesis in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -618,7 +665,7 @@
 
 *Replace curly braces with square brackets in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -634,7 +681,7 @@
 
 *Replace parenthesis with curly braces in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -650,7 +697,7 @@
 
 *Replace parenthesis with square brackets in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -666,7 +713,7 @@
 
 *Replace pipes with commas in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -681,7 +728,7 @@
 
 *Replace pipes with semicolons in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -696,7 +743,7 @@
 
 *Replace semicolons with commas in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -711,7 +758,7 @@
 
 *Replace semicolons with pipes in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -726,7 +773,7 @@
 
 *Replace spaces with hyphens in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -741,7 +788,7 @@
 
 *Replace spaces with periods in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -756,7 +803,7 @@
 
 *Replace spaces with underscores in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -771,7 +818,7 @@
 
 *Replace square brackets with curly braces in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -787,7 +834,7 @@
 
 *Replace square brackets with parenthesis in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -803,7 +850,7 @@
 
 *Replace underscores with hyphens in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -818,7 +865,7 @@
 
 *Replace underscores with spaces in selected text.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Replace`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -833,7 +880,7 @@
 
 *Removes spaces from end of a text string.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Trim`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -849,7 +896,7 @@
 
 *Spill characters of text in active cell to the right.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Split`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -866,7 +913,7 @@
 
 *Spill characters of text in active cell to the right in chunks of length N.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Split`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -883,7 +930,7 @@
 
 *Spill words of text in active cell to the right.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Split`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -900,7 +947,7 @@
 
 *Removes all spaces from a text string except single spaces between words.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Trim`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -915,7 +962,7 @@
 
 *Removes spaces from end of a text string.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Trim`</sup>
 
 | Property | Value |
 | --- | --- |
@@ -931,7 +978,7 @@
 
 *Removes spaces from start of a text string.*
 
-<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` </sup>
+<sup>`@Text Robot Vol 1.xlsm` `!Excel Formula Command` `#Trim`</sup>
 
 | Property | Value |
 | --- | --- |

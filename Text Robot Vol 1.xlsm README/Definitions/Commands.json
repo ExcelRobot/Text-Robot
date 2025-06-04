@@ -4,7 +4,11 @@
       "Name": "Append Specified Text",
       "Description": "Append the user provided text to the right of the selected text.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=([[ActiveCell::Formula]])&\"{{Text_To_Append}}\""
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=([[ActiveCell::Formula]])&\"{{Text_To_Append}}\"",
+      "Tags": [
+        "Insert"
+      ]
     },
     {
       "Name": "Convert To Camel Case",
@@ -12,6 +16,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=CamelCase([[ActiveCell::Formula]])",
+      "Tags": [
+        "Convert"
+      ],
       "FormulaDependencies": [
         "CamelCase.lambda"
       ]
@@ -22,6 +29,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=KabobCase([[ActiveCell::Formula]])",
+      "Tags": [
+        "Convert"
+      ],
       "FormulaDependencies": [
         "KabobCase.lambda"
       ]
@@ -34,7 +44,10 @@
       "LaunchCodes": [
         "lc"
       ],
-      "Formula": "=LOWER([[ActiveCell::Formula]])"
+      "Formula": "=LOWER([[ActiveCell::Formula]])",
+      "Tags": [
+        "Convert"
+      ]
     },
     {
       "Name": "Convert To Pascal Case",
@@ -42,6 +55,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=PascalCase([[ActiveCell::Formula]])",
+      "Tags": [
+        "Convert"
+      ],
       "FormulaDependencies": [
         "PascalCase.lambda"
       ]
@@ -55,7 +71,9 @@
         "pc"
       ],
       "Formula": "=PROPER([[ActiveCell::Formula]])",
-      "ScrollToDestination": false
+      "Tags": [
+        "Convert"
+      ]
     },
     {
       "Name": "Convert To Upper Case",
@@ -65,71 +83,98 @@
       "LaunchCodes": [
         "uc"
       ],
-      "Formula": "=UPPER([[ActiveCell::Formula]])"
+      "Formula": "=UPPER([[ActiveCell::Formula]])",
+      "Tags": [
+        "Convert"
+      ]
     },
     {
       "Name": "Keep First Character",
       "Description": "Returns first character in the active cell.",
       "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "l",
         "fc",
         "kfc"
       ],
-      "Formula": "=LEFT([[ActiveCell::Formula]])"
+      "Formula": "=LEFT([[ActiveCell::Formula]])",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep First N Characters",
       "Description": "Returns first N characters in the active cell.",
       "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "l",
         "fc",
         "kfc"
       ],
-      "Formula": "=LEFT([[ActiveCell::Formula]],{{N}})"
+      "Formula": "=LEFT([[ActiveCell::Formula]],{{N}})",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep First Word",
       "Description": "Return the first word in the active cell.",
       "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "fw",
         "kfw"
       ],
-      "Formula": "=TAKE(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,1)"
+      "Formula": "=TAKE(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,1)",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep Last Character",
       "Description": "Returns last character in the active cell.",
       "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "r",
         "lc",
         "klc"
       ],
-      "Formula": "=RIGHT([[ActiveCell::Formula]])"
+      "Formula": "=RIGHT([[ActiveCell::Formula]])",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep Last N Characters",
       "Description": "Returns last N characters in the active cell.",
       "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "r",
         "lc",
         "klc"
       ],
-      "Formula": "=RIGHT([[ActiveCell::Formula]],{{N}})"
+      "Formula": "=RIGHT([[ActiveCell::Formula]],{{N}})",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep Last Word",
       "Description": "Return the last word in the active cell.",
       "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "lw",
         "klw"
       ],
-      "Formula": "=TAKE(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,-1)"
+      "Formula": "=TAKE(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,-1)",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep Nth Word",
@@ -144,25 +189,35 @@
           "CachingPolicy": "CacheForDurationOfCommandExecution"
         }
       ],
+      "UserContextFilter": "ExcelActiveCellValueIsText",
       "LaunchCodes": [
         "nw",
         "knw"
       ],
-      "Formula": "=TAKE(TAKE(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,{{N}}),,-SIGN({{N}}))"
+      "Formula": "=TAKE(TAKE(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,{{N}}),,-SIGN({{N}}))",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep Text After Specified Text",
       "Description": "Keeps the text right of the first instance of the specified text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=TEXTAFTER([[ActiveCell::Formula]],\"{{Specified_Text}}\")"
+      "Formula": "=TEXTAFTER([[ActiveCell::Formula]],\"{{Specified_Text}}\")",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Keep Text Before Specified Text",
       "Description": "Keeps the text left of the last instance of the specified text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=TEXTBEFORE([[ActiveCell::Formula]],\"{{Specified_Text}}\",-1)"
+      "Formula": "=TEXTBEFORE([[ActiveCell::Formula]],\"{{Specified_Text}}\",-1)",
+      "Tags": [
+        "Keep"
+      ]
     },
     {
       "Name": "Left Trim Spaces",
@@ -170,6 +225,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=TrimStart([[ActiveCell::Formula]], \" \")",
+      "Tags": [
+        "Trim"
+      ],
       "FormulaDependencies": [
         "TrimStart.lambda"
       ]
@@ -183,6 +241,9 @@
         "c"
       ],
       "Formula": "=Characters([[ActiveCell::Formula]], TRUE)",
+      "Tags": [
+        "Split"
+      ],
       "FormulaDependencies": [
         "Characters.lambda"
       ]
@@ -196,6 +257,9 @@
         "w"
       ],
       "Formula": "=Words([[ActiveCell::Formula]], TRUE)",
+      "Tags": [
+        "Split"
+      ],
       "FormulaDependencies": [
         "Words.lambda"
       ]
@@ -204,7 +268,11 @@
       "Name": "Prepend Specified Text",
       "Description": "Prepend the user provided text to the left of the selected text.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=\"{{Text_To_Prepend}}\"&([[ActiveCell::Formula]])"
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=\"{{Text_To_Prepend}}\"&([[ActiveCell::Formula]])",
+      "Tags": [
+        "Insert"
+      ]
     },
     {
       "Name": "Remove First N Characters",
@@ -221,19 +289,30 @@
         }
       ],
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=MID([[ActiveCell::Formula]],{{N}}+1,999999)"
+      "Formula": "=MID([[ActiveCell::Formula]],{{N}}+1,999999)",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove First N Words",
       "Description": "Removes the first N words from the text in the selection.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,{{Number_Of_Words_To_Remove}}))"
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,{{Number_Of_Words_To_Remove}}))",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove First Word",
       "Description": "Removes the first word from the text in the selection.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,1))"
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,1))",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove Last N Characters",
@@ -250,53 +329,80 @@
         }
       ],
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=LEFT([[ActiveCell::Formula]],MAX(LEN([[ActiveCell::Formula]])-{{N}},0))"
+      "Formula": "=LEFT([[ActiveCell::Formula]],MAX(LEN([[ActiveCell::Formula]])-{{N}},0))",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove Last N Words",
       "Description": "Removes the last N words from the text in the selection.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,-{{Number_Of_Words_To_Remove}}))"
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,-{{Number_Of_Words_To_Remove}}))",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove Last Word",
       "Description": "Removes the last word from the text in the selection.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,-1))"
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=TEXTJOIN(\" \",TRUE,DROP(TEXTSPLIT([[ActiveCell::Formula]],\" \"),,-1))",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove Specified Text",
       "Description": "Remove specified text from the selection.",
       "Type": "ExcelFormulaCommand",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"{{Text_To_Remove}}\",\"\")"
+      "UserContextFilter": "ExcelActiveCellValueIsText",
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"{{Text_To_Remove}}\",\"\")",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove Text After Specified Text",
       "Description": "Removes the text right of the first instance of the specified text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=TEXTBEFORE([[ActiveCell::Formula]],\"{{Specified_Text}}\")&\"{{Specified_Text}}\""
+      "Formula": "=TEXTBEFORE([[ActiveCell::Formula]],\"{{Specified_Text}}\")&\"{{Specified_Text}}\"",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Remove Text Before Specified Text",
       "Description": "Removes the text left of the last instance of the specified text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=\"{{Specified_Text}}\"&TEXTAFTER([[ActiveCell::Formula]],\"{{Specified_Text}}\",-1)"
+      "Formula": "=\"{{Specified_Text}}\"&TEXTAFTER([[ActiveCell::Formula]],\"{{Specified_Text}}\",-1)",
+      "Tags": [
+        "Remove"
+      ]
     },
     {
       "Name": "Replace Commas With Pipes",
       "Description": "Replace commas with pipes in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\",\",\"|\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\",\",\"|\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Commas With Semicolons",
       "Description": "Replace commas with semicolons in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\",\",\";\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\",\",\";\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Curly Braces With Parenthesis",
@@ -304,6 +410,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=Substitutions([[ActiveCell::Formula]], {\"{\",\"}\"}, {\"(\",\")\"})",
+      "Tags": [
+        "Replace"
+      ],
       "FormulaDependencies": [
         "Substitutions.lambda"
       ]
@@ -314,6 +423,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=Substitutions([[ActiveCell::Formula]], {\"{\",\"}\"}, {\"[\",\"]\"})",
+      "Tags": [
+        "Replace"
+      ],
       "FormulaDependencies": [
         "Substitutions.lambda"
       ]
@@ -324,6 +436,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=Substitutions([[ActiveCell::Formula]], {\"(\",\")\"}, {\"{\",\"}\"})",
+      "Tags": [
+        "Replace"
+      ],
       "FormulaDependencies": [
         "Substitutions.lambda"
       ]
@@ -334,6 +449,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=Substitutions([[ActiveCell::Formula]], {\"(\",\")\"}, {\"[\",\"]\"})",
+      "Tags": [
+        "Replace"
+      ],
       "FormulaDependencies": [
         "Substitutions.lambda"
       ]
@@ -343,49 +461,70 @@
       "Description": "Replace pipes with commas in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"|\",\",\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"|\",\",\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Pipes With Semicolons",
       "Description": "Replace pipes with semicolons in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"|\",\";\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"|\",\";\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Semicolons With Commas",
       "Description": "Replace semicolons with commas in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\";\",\",\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\";\",\",\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Semicolons With Pipes",
       "Description": "Replace semicolons with pipes in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\";\",\"|\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\";\",\"|\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Spaces With Hyphens",
       "Description": "Replace spaces with hyphens in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\" \",\"-\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\" \",\"-\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Spaces With Periods",
       "Description": "Replace spaces with periods in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\" \",\".\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\" \",\".\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Spaces With Underscores",
       "Description": "Replace spaces with underscores in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\" \",\"_\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\" \",\"_\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Square Brackets With Curly Braces",
@@ -393,6 +532,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=Substitutions([[ActiveCell::Formula]], {\"[\",\"]\"}, {\"{\",\"}\"})",
+      "Tags": [
+        "Replace"
+      ],
       "FormulaDependencies": [
         "Substitutions.lambda"
       ]
@@ -403,6 +545,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=Substitutions([[ActiveCell::Formula]], {\"[\",\"]\"}, {\"(\",\")\"})",
+      "Tags": [
+        "Replace"
+      ],
       "FormulaDependencies": [
         "Substitutions.lambda"
       ]
@@ -412,14 +557,20 @@
       "Description": "Replace underscores with hyphens in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"_\",\"-\")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"_\",\"-\")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Replace Underscores With Spaces",
       "Description": "Replace underscores with spaces in selected text.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"_\",\" \")"
+      "Formula": "=SUBSTITUTE([[ActiveCell::Formula]],\"_\",\" \")",
+      "Tags": [
+        "Replace"
+      ]
     },
     {
       "Name": "Right Trim Spaces",
@@ -427,6 +578,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=TrimEnd([[ActiveCell::Formula]], \" \")",
+      "Tags": [
+        "Trim"
+      ],
       "FormulaDependencies": [
         "TrimEnd.lambda"
       ]
@@ -440,6 +594,9 @@
         "c"
       ],
       "Formula": "=Characters([[ActiveCell::Formula]])",
+      "Tags": [
+        "Split"
+      ],
       "FormulaDependencies": [
         "Characters.lambda"
       ]
@@ -453,6 +610,9 @@
         "c"
       ],
       "Formula": "=Characters([[ActiveCell::Formula]],,{{N}})",
+      "Tags": [
+        "Split"
+      ],
       "FormulaDependencies": [
         "Characters.lambda"
       ]
@@ -466,6 +626,9 @@
         "w"
       ],
       "Formula": "=Words([[ActiveCell::Formula]])",
+      "Tags": [
+        "Split"
+      ],
       "FormulaDependencies": [
         "Words.lambda"
       ]
@@ -475,7 +638,10 @@
       "Description": "Removes all spaces from a text string except single spaces between words.",
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
-      "Formula": "=TRIM([[ActiveCell::Formula]])"
+      "Formula": "=TRIM([[ActiveCell::Formula]])",
+      "Tags": [
+        "Trim"
+      ]
     },
     {
       "Name": "Trim Spaces From End",
@@ -483,6 +649,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=TrimEnd([[ActiveCell::Formula]], \" \")",
+      "Tags": [
+        "Trim"
+      ],
       "FormulaDependencies": [
         "TrimEnd.lambda"
       ]
@@ -493,6 +662,9 @@
       "Type": "ExcelFormulaCommand",
       "UserContextFilter": "ExcelActiveCellValueIsText",
       "Formula": "=TrimStart([[ActiveCell::Formula]], \" \")",
+      "Tags": [
+        "Trim"
+      ],
       "FormulaDependencies": [
         "TrimStart.lambda"
       ]
